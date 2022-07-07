@@ -9,7 +9,14 @@ const CurrentColor = () => {
     PURPLE = 4,
   }
 
+  
+
   const [currentColor, setCurrentColor] = useState<Color>(Color.RED);
+
+  React.useEffect(() => {
+    let picture = document.getElementById('picture').src;
+    console.log(picture);
+  }, [currentColor]);
 
   const after = (value: Color) => {
     setCurrentColor(value + 1);
@@ -47,6 +54,13 @@ const CurrentColor = () => {
 
   const lastColor: Color = returnAfter(Color.GREEN);
 
+  const getColorName = (currentColor: Color) => {
+    console.log(Color[currentColor]);
+    let lowname = Color[currentColor].toLowerCase();
+    console.log(lowname);
+    return lowname;
+  };
+
   return (
     <div>
       <p>Current Color is: {currentColor}</p>
@@ -64,6 +78,17 @@ const CurrentColor = () => {
         >
           After
         </button>
+      </div>
+      <br />
+      <div className="is-flex is-justify-content-center">
+        <figure className="image">
+          <img
+            id="picture"
+            src={
+              '../assets/' + `${getColorName(currentColor)}` + '_flowers.jpg'
+            }
+          />
+        </figure>
       </div>
     </div>
   );
