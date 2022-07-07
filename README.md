@@ -14,3 +14,4 @@ Just some experiments and testing with TypeScript enums, so I can learn more abo
 - [Official Typescript Docs on Enums](https://www.typescriptlang.org/docs/handbook/enums.html)
 - [YouTube: Typescript Enums explained](https://www.youtube.com/watch?v=3fXpL1O3epw)
 - [YouTube: Typescript Enums or Objects?](https://www.youtube.com/watch?v=JfcLkoBirZo)
+- [Getting TypeScript types from Arrays](https://steveholgado.com/typescript-types-from-arrays/)
