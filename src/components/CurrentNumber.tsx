@@ -12,7 +12,11 @@ export default function CurrentNumber() {
 
   function plusNum(currentNumber: OurNumber) {
     if (currentNumber < max) {
-      setCurrentNumber(currentNumber + 1);
+      console.log("currentNumber's value is: ", currentNumber);
+      let plusNumber = Number(currentNumber);
+      plusNumber = plusNumber + 1;
+      const newNumber: OurNumber = plusNumber as OurNumber;
+      setCurrentNumber(newNumber);
     } else {
       console.error("Max number already reached");
     }
@@ -20,7 +24,10 @@ export default function CurrentNumber() {
 
   function minusNum(currentNumber: OurNumber) {
     if (currentNumber > min) {
-      setCurrentNumber(currentNumber - 1);
+      let minusNumber = Number(currentNumber);
+      minusNumber = minusNumber - 1;
+      const newNumber: OurNumber = minusNumber as OurNumber;
+      setCurrentNumber(newNumber);
     } else {
       console.error("Min number already reached");
     }
